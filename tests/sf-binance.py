@@ -5,8 +5,9 @@ api_secret = "vHC9cnCEIYq6qRQQRPWqOreGs4PpGF2JrAClezhnZKidDd3R28jLvNuP4foRW3jo"
 client = Client(api_key, api_secret)
 
 klines = client.get_historical_klines("BTCUSDT", Client.KLINE_INTERVAL_1DAY, "1 Sep, 2019", "30 Oct, 2019")
-dflist=[klines]
+dflist=klines
 df=pd.DataFrame(dflist)
+print (df)
 mode1='w'
 filename='day'
 with open('/home/sf/test/log2/'+filename+'.csv',mode1) as f:
