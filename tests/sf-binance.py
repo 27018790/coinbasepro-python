@@ -8,5 +8,6 @@ klines = client.get_historical_klines("BTCUSDT", Client.KLINE_INTERVAL_1DAY, "1 
 dflist=[klines]
 df=pd.DataFrame(dflist)
 mode1='w'
+filename='day'
 with open('/home/sf/test/log2/'+filename+'.csv',mode1) as f:
      df.to_csv(f,index=False,header=False)
